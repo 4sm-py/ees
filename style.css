@@ -1,0 +1,102 @@
+/* General body settings */
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Profile section */
+.profile {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    border: 2px solid #fff;
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.username {
+    color: #ccc;
+    font-size: 1.3em;
+}
+
+/* Links section */
+.links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #140000; /* Dark background for link */
+    margin: 15px;
+    border-radius: 50px; /* Rounded buttons */
+    width: 85%; /* Wider buttons */
+    max-width: 500px; /* Limit the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    text-decoration: none; /* Remove underline from text */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Pointer to indicate clickable */
+}
+
+.link-item:hover {
+    background-color: #000000; /* Change background on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Shadow grows on hover */
+}
+
+.link-item img {
+    width: 80px; /* Larger circular icon */
+    height: 80px;
+    border-radius: 50%; /* Circular images */
+    margin-right: 20px; /* Space between icon and text */
+    border: 2px solid #000000; /* White border around the icon */
+}
+
+.link-item span {
+    font-size: 1.5em; /* Larger font for text */
+    color: #bbb; /* Softer white */
+    font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 2em;
+    }
+
+    .link-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .link-item span {
+        font-size: 1.3em;
+    }
+
+    .link-item {
+        width: 95%; /* Full width for smaller devices */
+    }
+}
