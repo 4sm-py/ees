@@ -1,35 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evoking</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evoking</title>
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a;
+            font-family: 'Arial', sans-serif;
+            color: #f0f0f0;
+        }
+
+        .content {
+            text-align: center;
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+            color: #e0e0e0;
+            position: relative;
+            animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            color: #b0b0b0;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards;
+        }
+
+        .button {
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: #333;
+            color: #f0f0f0;
+            border-radius: 50px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #555;
+            transform: translateY(-5px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            .button-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .button {
+                width: 80%;
+                text-align: center;
+            }
+        }
+
+        /* Animazioni */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.2), 0 0 20px rgba(255, 255, 255, 0.4);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.9);
+            }
+        }
+
+        /* Transizione gradient */
+        body {
+            animation: backgroundGradient 6s ease infinite alternate;
+        }
+
+        @keyframes backgroundGradient {
+            0% {
+                background-color: #1a1a1a;
+            }
+            100% {
+                background-color: #0f0f0f;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="profile">
-        <img class="profile-img" src="evoking.gif" alt="Evoking">
-        <h1 class="name">Evoking</h1>
-        <p class="username">/evokingg</p>
-    </div>
-    
-    <div class="links">
-        <a href="https://www.tiktok.com/@ms4wljabaaaazl1t7qeekprsdd197v_lrtujpasvta4sz7pchn3ofw_y21v1qtahs8mjowuz4494/video/7423368159605820690?is_from_webapp=1&sender_device=pc&web_id=7369153797865948678" target="_blank" class="link-item">
-            <img src="evoking.gif" alt="Evoking Tiktok">
-            <span>Evoking Tiktok</span>
-        </a>
-        <a href="https://discord.gg/evokingg" target="_blank" class="link-item">
-            <img src="evoking.gif" alt="Evoking Discord Server">
-            <span>Evoking Discord Server</span>
-        </a>
-        <a href="https://discord.com/users/1184009692545028100" target="_blank" class="link-item">
-            <img src="evoking.gif" alt="Evoking Discord">
-            <span>Evoking Discord</span>
-        </a>
-        <a href="https://t.me/alhntoshi" target="_blank" class="link-item">
-            <img src="evoking.gif" alt="Evoking Telegram">
-            <span>Evoking Telegram</span>
-        </a>
-    </div>
+<div class="content">
+<h1>Evoking</h1>
+<p>Download the best free tools!</p>
+<p>discord.gg/evokingg</p>
+</div>
+<div class="button-container">
+<a href="register.php" class="button">Register</a>
+<a href="login.php" class="button">Login</a>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"8d06fc0a7ef4ce72","version":"2024.8.0","r":1,"token":"5f9d6ae45c944852868b2ec8ac10f114","serverTiming":{"name":{"cfExtPri":true,"cfL4":true}}}' crossorigin="anonymous"></script>
 </body>
 </html>
